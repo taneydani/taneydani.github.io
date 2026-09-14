@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es-MX"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260911-01-a45ed2d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/c21197326e9a1154.telemetry_sdk.js" integrity="sha512-Aqwl+NmLtKBcMQM4HY+W9lmBHa+zP5MqSEuYfCjkzt4xeOSv2xNz81cCp7JyXBVrY+zojg5o94FHY/R31v2d3Q=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boda de Tane y Dani</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #342718;
+      --gold: #b98a35;
+      --deep-gold: #7f571d;
+      --paper: #fffaf0;
+      --line: rgba(154, 108, 39, 0.28);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-width: 100%;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .wedding-page {
+      width: 100%;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+      position: relative;
+      overflow: hidden;
+      padding: 26px 16px 38px;
+      background-color: #f8eed8;
+      background-image:
+        radial-gradient(circle at 18% 9%, rgba(255,255,255,.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 83% 18%, rgba(183,130,43,.24) 0 1px, transparent 2px),
+        linear-gradient(145deg, #fcf6e9 0%, #eddaa9 48%, #fff9ed 100%);
+      background-size: 110px 110px, 145px 145px, auto;
+    }
+
+    .wedding-page::before,
+    .wedding-page::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border-radius: 999px;
+      filter: blur(12px);
+      opacity: .7;
+    }
+
+    .wedding-page::before {
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, .68);
+      top: -130px;
+      left: -110px;
+    }
+
+    .wedding-page::after {
+      width: 270px;
+      height: 270px;
+      background: rgba(205, 155, 56, .22);
+      right: -115px;
+      bottom: 110px;
+    }
+
+    .invite-shell {
+      width: 100%;
+      max-width: 610px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      border: 1px solid rgba(174, 126, 49, .38);
+      background: rgba(255, 252, 243, .78);
+      box-shadow: 0 24px 70px rgba(85, 53, 10, .17);
+      backdrop-filter: blur(8px);
+    }
+
+    .invite-shell::before {
+      content: "";
+      position: absolute;
+      inset: 9px;
+      border: 1px solid rgba(185, 138, 53, .32);
+      pointer-events: none;
+    }
+
+    .spark {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #d5ab58;
+      box-shadow: 0 0 12px 4px rgba(213, 171, 88, .32);
+      animation: drift 5s ease-in-out infinite;
+    }
+
+    .spark:nth-child(1) { left: 7%; top: 8%; animation-delay: .3s; }
+    .spark:nth-child(2) { right: 5%; top: 26%; animation-delay: 1.1s; }
+    .spark:nth-child(3) { left: 10%; bottom: 29%; animation-delay: 2.2s; }
+    .spark:nth-child(4) { right: 11%; bottom: 8%; animation-delay: 3.1s; }
+
+    @keyframes drift {
+      0%, 100% { transform: translateY(0) scale(.8); opacity: .35; }
+      50% { transform: translateY(-13px) scale(1.2); opacity: 1; }
+    }
+
+    .serif { font-family: "Playfair Display", serif; }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #b98a35;
+    }
+
+    .ornament::before,
+    .ornament::after {
+      content: "";
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ba8b39);
+    }
+
+    .ornament::after {
+      background: linear-gradient(to left, transparent, #ba8b39);
+    }
+
+    .hero-photo-frame {
+      border: 8px solid #fffaf0;
+      box-shadow: 0 14px 26px rgba(101, 67, 17, .18);
+      transform: rotate(-1.5deg);
+    }
+
+    .hero-photo-frame img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      filter: sepia(.12) saturate(.88) contrast(.98);
+    }
+
+    .detail-rule {
+      width: 1px;
+      height: 32px;
+      margin: 14px auto;
+      background: linear-gradient(#d4af62, transparent);
+    }
+
+    .info-card {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .count-card {
+      background: linear-gradient(135deg, #5d3e13, #8c6223 62%, #6c4918);
+      box-shadow: 0 12px 26px rgba(84, 54, 13, .2);
+    }
+
+    .count-number {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.8rem, 7vw, 2.65rem);
+      line-height: 1;
+      color: #fff8e8;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .count-cell + .count-cell { border-left: 1px solid rgba(255, 242, 202, .24); }
+
+    .music-panel {
+      background: rgba(255, 250, 239, .8);
+      border: 1px solid rgba(183, 130, 43, .33);
+    }
+
+    .gold-button {
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
+
+    .gold-button:hover { transform: translateY(-2px); filter: brightness(1.04); }
+    .gold-button:active { transform: translateY(0); }
+    button:focus-visible, input:focus-visible, a:focus-visible {
+      outline: 3px solid #4f78a8;
+      outline-offset: 3px;
+    }
+
+    input[type="range"] {
+      accent-color: #9a6b27;
+    }
+
+    input[type="datetime-local"],
+    input[type="file"] {
+      color: #543e1d;
+      font-family: "DM Sans", sans-serif;
+    }
+
+    .status-message {
+      min-height: 1.3rem;
+    }
+
+    @media (max-width: 420px) {
+      .wedding-page { padding: 12px 10px 28px; }
+      .invite-shell::before { inset: 6px; }
+      .count-card { padding-left: 8px; padding-right: 8px; }
+      .count-cell { padding-left: 6px; padding-right: 6px; }
+    }
+    .reproductor  {
+           display: flex; 
+           justify-content: flex-end;
+    }
+    .video {
+        margin: 20px;
+    }
+  </style>
+  <script src="/_sdk/efe904fe8a212716.data_sdk.js" type="text/javascript" integrity="sha512-oiO0pmn5llS1uDeB2l690YywxqOe/a0U1kzY6RGaLZXtyh9YjTk1CUoK/bJUugc1QbUaJMJ3IE1MtpNY5NBZCw=="></script>
+  <script src="/_sdk/6125e8aa3c264a2d.resizing_sdk.js" type="text/javascript" integrity="sha512-+j9iK2FF/yFSTU389rFqKj3v0s1ELh1r0aj3mqpsVRZujaeWi0WgN7jmTcWLcBq91dz3NCEyXqMtHbwpOxhDYg=="></script>
+ </head>
+ <body data-template-id="__page-root" style="background: linear-gradient(145deg, rgb(252, 246, 233), rgb(237, 218, 169), rgb(255, 249, 237));">    
+    <div class="wedding-page">
+   <span class="spark" aria-hidden="true"></span> <span class="spark" aria-hidden="true"></span> <span class="spark" aria-hidden="true"></span> <span class="spark" aria-hidden="true"></span>
+   <main class="invite-shell">
+    <header class="px-7 pt-12 pb-8 text-center sm:px-12 sm:pt-16">
+     <div class="ornament mb-5" aria-hidden="true">
+      <i data-lucide="sparkles" style="width:18px;height:18px"></i>
+     </div>
+     <p data-template-id="welcome-message" class="canva-text serif italic tracking-wide" style="color: rgb(108, 74, 22); font-weight: 400; font-style: italic; font-size: 20px;">"Es un mundo de infinitas posibilidades, qué fortuna que nuestras almas eligieran encontrarse."</p>
+     <div class="detail-rule" aria-hidden="true"></div>
+     <p data-template-id="intro-line" class="canva-text uppercase tracking-[0.22em] text-xs" style="color: rgb(141, 99, 34); font-weight: 600; font-style: normal; font-size: 11px; letter-spacing: 0.12rem;">TE INVITAMOS A NUESTRA BODA</p>
+    </header>
+    <section aria-labelledby="couple-names" class="px-7 text-center sm:px-12">
+     <div class="hero-photo-frame mx-auto max-w-sm">
+      <img data-template-id="wedding-hero-image" class="canva-image" loading="lazy" src="imagenes/WhatsApp Image 2026-09-10 at 12.45.32 PM.jpeg" alt="WhatsApp Image 2026-09-10 at 12.45.32 PM.jpg">
+     </div>
+     <div class="pt-10">
+      <h1 id="couple-names" data-template-id="couple-names" class="canva-text serif leading-tight" style="color: rgb(63, 45, 21); font-weight: 500; font-style: normal; font-size: 32px;">Taneydi &amp; Daniel</h1>
+      <div class="ornament mt-5" aria-hidden="true">
+       <i data-lucide="heart" fill="currentColor" style="width:14px;height:14px"></i>
+      </div>
+     </div>
+    </section>
+    <section>
+      <div class="video" >
+        <video autoplay muted src="video/Black and White Simple Elegant Modern Floral Illustrative Wedding Invitation Video (3).mp4" controls width="640" height="360"></video>
+      </div>
+    </section>
+    <section data-template-id="event-information" class="canva-panel info-card mx-7 mt-10 px-4 py-7 text-center sm:mx-12 sm:px-8" aria-labelledby="event-heading" style="background: rgba(255, 250, 239, 0.48);">
+     <h2 id="event-heading" data-template-id="event-heading" class="canva-text serif" style="color: rgb(109, 75, 24); font-weight: 500; font-style: normal; font-size: 24px;">El gran día</h2>
+     <div class="mt-5 grid gap-5">
+      <div>
+       <i data-lucide="calendar-days" class="mx-auto mb-2 text-[#a67528]" style="width:19px;height:19px" aria-hidden="true"></i>
+       <p data-template-id="event-date" class="canva-text serif" style="color: rgb(77, 53, 20); font-weight: 400; font-style: normal; font-size: 21px;">Sábado, 05 de Diciembre, 2026</p>
+      </div>
+     </div>
+     <div class="mt-8 border-t border-[#d4af62] pt-7" aria-labelledby="countdown-heading">
+      <p data-template-id="countdown-kicker" class="canva-text uppercase tracking-[0.2em] text-xs" style="color: rgb(144, 102, 41); font-weight: 600; font-style: normal; font-size: 11px; letter-spacing: 0.1rem;">FALTA MUY POCO</p>
+      <h2 id="countdown-heading" data-template-id="countdown-heading" class="canva-text serif mt-2" style="color: rgb(95, 66, 21); font-weight: 500; font-style: normal; font-size: 24px;">Cuenta regresiva</h2>
+      <div class="count-card mt-5 grid grid-cols-4 rounded-sm px-3 py-5">
+       <div class="count-cell">
+        <div id="days" class="count-number" aria-live="polite">
+         000
+        </div>
+        <p data-template-id="days-label" class="canva-text mt-2 text-[10px] uppercase tracking-[0.12em]" style="color: rgb(255, 247, 229); font-weight: 600; font-style: normal; font-size: 10px; letter-spacing: 0.08rem;">Días</p>
+       </div>
+       <div class="count-cell">
+        <div id="hours" class="count-number" aria-live="polite">
+         00
+        </div>
+        <p data-template-id="hours-label" class="canva-text mt-2 text-[10px] uppercase tracking-[0.12em]" style="color: rgb(255, 247, 229); font-weight: 600; font-style: normal; font-size: 10px; letter-spacing: 0.08rem;">Horas</p>
+       </div>
+       <div class="count-cell">
+        <div id="minutes" class="count-number" aria-live="polite">
+         00
+        </div>
+        <p data-template-id="minutes-label" class="canva-text mt-2 text-[10px] uppercase tracking-[0.12em]" style="color: rgb(255, 247, 229); font-weight: 600; font-style: normal; font-size: 10px; letter-spacing: 0.08rem;">Minutos</p>
+       </div>
+       <div class="count-cell">
+        <div id="seconds" class="count-number" aria-live="polite">
+         00
+        </div>
+        <p data-template-id="seconds-label" class="canva-text mt-2 text-[10px] uppercase tracking-[0.12em]" style="color: rgb(255, 247, 229); font-weight: 600; font-style: normal; font-size: 10px; letter-spacing: 0.08rem;">Segundos</p>
+       </div>
+      </div>
+      <p id="countdown-status" class="status-message mt-3 text-sm text-[#6a4b1c]" aria-live="polite"></p>
+     </div>
+    </section>
+    <section class="px-7 pt-10 text-center sm:px-12" aria-labelledby="venues-heading">
+     <h2 id="venues-heading" data-template-id="venues-heading" class="canva-text serif" style="color: rgb(95, 66, 21); font-weight: 500; font-style: normal; font-size: 24px;">Lugares de la celebración</h2>
+     <div class="mt-5 grid gap-5">
+      <article data-template-id="ceremony-card" class="canva-card rounded-sm border border-[#d8bb7a] bg-[#fffaf0] px-4 py-6 shadow-sm" style="background: rgb(255, 250, 240);">
+       <i data-lucide="church" class="mx-auto mb-3 text-[#a67528]" style="width:21px;height:21px" aria-hidden="true"></i>
+       <h3 data-template-id="ceremony-title" class="canva-text serif" style="color: rgb(95, 66, 21); font-weight: 500; font-style: normal; font-size: 21px;">Ceremonia</h3>
+       <div class="mt-4 grid gap-2">
+        <p data-template-id="ceremony-date" class="canva-text serif" style="color: rgb(77, 53, 20); font-weight: 400; font-style: normal; font-size: 17px;">Sábado, 05 de Diciembre, 2026</p>
+        <p data-template-id="ceremony-time" class="canva-text" style="color: rgb(101, 71, 22); font-weight: 600; font-style: normal; font-size: 16px;">4:00 p. m.</p>
+        <p data-template-id="ceremony-venue" class="canva-text serif" style="color: rgb(77, 53, 20); font-weight: 400; font-style: normal; font-size: 19px;">Parroquia de Nuestra Señora del Sagrado Corazón de Jesús.</p>
+        <p data-template-id="ceremony-address" class="canva-text mt-1" style="color: rgb(112, 83, 35); font-weight: 400; font-style: normal; font-size: 14px;">Rubi Sur 1A, La Joya, 90114 Tlaxcala de Xicohténcatl, Tlax</p>
+       </div><a data-template-id="ceremony-map-button" class="canva-button gold-button mt-5 inline-flex items-center gap-2 rounded-sm px-4 py-2.5" href="https://www.google.com/maps/place/Cuasiparroquia+de+Nuestra+Se%C3%B1ora+del+Sagrado+Coraz%C3%B3n+de+Jes%C3%BAs./@19.3067462,-98.2324688,776m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85cfd943175a8ba5:0xddde3a888108e99!8m2!3d19.3067462!4d-98.2324688!16s%2Fg%2F11j_9ccknw?entry=ttu&amp;g_ep=EgoyMDI2MDkwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="background: rgb(154, 107, 39); color: rgb(255, 250, 240);"><i data-lucide="map-pin" style="width:16px;height:16px" aria-hidden="true"></i><span data-template-id="ceremony-map-button-text" class="canva-text" style="color: rgb(255, 250, 240); font-weight: 600; font-style: normal; font-size: 14px;">Ver mapa</span></a>
+      </article>
+      <article data-template-id="reception-card" class="canva-card rounded-sm border border-[#d8bb7a] bg-[#fffaf0] px-4 py-6 shadow-sm" style="background: rgb(255, 250, 240);">
+       <i data-lucide="utensils" class="mx-auto mb-3 text-[#a67528]" style="width:21px;height:21px" aria-hidden="true"></i>
+       <h3 data-template-id="reception-title" class="canva-text serif" style="color: rgb(95, 66, 21); font-weight: 500; font-style: normal; font-size: 21px;">Recepción</h3>
+       <div class="mt-4 grid gap-2">
+        <p data-template-id="reception-date" class="canva-text serif" style="color: rgb(77, 53, 20); font-weight: 400; font-style: normal; font-size: 17px;">Sábado, 05 de Diciembre, 2026</p>
+        <p data-template-id="reception-time" class="canva-text" style="color: rgb(101, 71, 22); font-weight: 600; font-style: normal; font-size: 16px;">5;30 p. m.</p>
+        <p data-template-id="reception-venue" class="canva-text serif" style="color: rgb(77, 53, 20); font-weight: 400; font-style: normal; font-size: 19px;">Salón Jardín de las Orquídeas</p>
+        <p data-template-id="reception-address" class="canva-text mt-1" style="color: rgb(112, 83, 35); font-weight: 400; font-style: normal; font-size: 14px;">Hidalgo 60, Barrio del Alto, 90110 San Lucas Cuauhtelulpan, Tlax.</p>
+       </div><a data-template-id="reception-map-button" class="canva-button gold-button mt-5 inline-flex items-center gap-2 rounded-sm px-4 py-2.5" href="https://www.google.com/maps/place/Jardin+de+las+Orquideas+Tlaxcala/@19.291793,-98.2636285,776m/data=!3m2!1e3!4b1!4m6!3m5!1s0x85cfd97f4a48781b:0x4943262b028d267e!8m2!3d19.291793!4d-98.2636285!16s%2Fg%2F11g8w2bqg_?entry=ttu&amp;g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style="background: rgb(154, 107, 39); color: rgb(255, 250, 240);"><i data-lucide="map-pin" style="width:16px;height:16px" aria-hidden="true"></i><span data-template-id="reception-map-button-text" class="canva-text" style="color: rgb(255, 250, 240); font-weight: 600; font-style: normal; font-size: 14px;">Ver mapa</span></a>
+      </article>
+     </div>
+    </section>
+    <section class="px-7 pb-12 pt-11 text-center sm:px-12 sm:pb-16" aria-labelledby="rsvp-heading">
+     <div class="ornament" aria-hidden="true">
+      <i data-lucide="sparkles" style="width:17px;height:17px"></i>
+     </div>
+     <h2 id="rsvp-heading" data-template-id="rsvp-heading" class="canva-text serif mt-5" style="color: rgb(95, 66, 21); font-weight: 500; font-style: normal; font-size: 24px;">Confirma tu asistencia</h2>
+     <p data-template-id="rsvp-message" class="canva-text mx-auto mt-3 max-w-md leading-relaxed" style="color: rgb(112, 83, 35); font-weight: 400; font-style: normal; font-size: 15px;">Tu presencia será el detalle más especial. Por favor, confirma antes del 10 de Noviembre del 2026</p><a data-template-id="rsvp-button" class="canva-button gold-button mt-6 inline-flex items-center gap-2 rounded-sm px-6 py-3" href="https://forms.gle/CEVmwwhHeyipdHaz5" target="_blank" rel="noopener noreferrer" style="background: rgb(154, 107, 39); color: rgb(255, 250, 240);"> <i data-lucide="mail-check" style="width:17px;height:17px" aria-hidden="true"></i> <span data-template-id="rsvp-button-text" class="canva-text" style="color: rgb(255, 250, 240); font-weight: 600; font-style: normal; font-size: 15px;">Confirmar asistencia</span> </a>
+     <footer class="mt-10">
+      <p data-template-id="farewell-message" class="canva-text serif italic" style="color: rgb(120, 85, 34); font-weight: 400; font-style: italic; font-size: 18px;">Con amor, Tane &amp; Dani</p>
+     </footer>
+    </section>
+   </main>   
+  </div>
+  <audio src="audio/Salvador Aponte - Tengo Planes Para Ti (Video Oficial).mp3" id="musica-fondo" loop></audio>
+  
+  <script src="/_sdk/a2d80034c9a70a18.editing_sdk.js" integrity="sha512-gj+CjW8sJ2O41CTbmTWGW+KC4E59rCq//n91BemDfzGrUB9REGAumT0UKy90X5r4wGZZy1G5qVtclSpgi4i1zA=="></script>
+  <script>
+    const countdownStatus = document.getElementById('countdown-status');
+    const countdownParts = {
+      days: document.getElementById('days'),
+      hours: document.getElementById('hours'),
+      minutes: document.getElementById('minutes'),
+      seconds: document.getElementById('seconds')
+    };
+
+    const targetTime = new Date('2026-12-05T16:00:00').getTime();
+
+    function updateCountdown() {
+      const difference = targetTime - Date.now();
+
+      if (!Number.isFinite(targetTime)) {
+        Object.values(countdownParts).forEach((element) => { element.textContent = '--'; });
+        countdownStatus.textContent = 'Selecciona una fecha y hora para iniciar la cuenta regresiva.';
+        return;
+      }
+
+      if (difference <= 0) {
+        countdownParts.days.textContent = '000';
+        countdownParts.hours.textContent = '00';
+        countdownParts.minutes.textContent = '00';
+        countdownParts.seconds.textContent = '00';
+        countdownStatus.textContent = '¡Hoy celebramos el gran día!';
+        return;
+      }
+
+      const totalSeconds = Math.floor(difference / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      countdownParts.days.textContent = String(days).padStart(3, '0');
+      countdownParts.hours.textContent = String(hours).padStart(2, '0');
+      countdownParts.minutes.textContent = String(minutes).padStart(2, '0');
+      countdownParts.seconds.textContent = String(seconds).padStart(2, '0');
+      countdownStatus.textContent = '';
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    lucide.createIcons();
+    
+  </script>
+  <script>
+        // Activa la música al hacer el primer clic en cualquier parte de la página
+        window.addEventListener('click', () => {
+            const audio = document.getElementById('musica-fondo');
+            
+            // Intentar reproducir el audio
+            audio.play().catch(error => {
+                console.log("La reproducción automática fue bloqueada por el navegador:", error);
+            });
+        }, { once: true }); // '{ once: true }' asegura que el evento solo se ejecute una vez
+    </script>
+
+ 
+</body></html>
